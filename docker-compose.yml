@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  tobaco_back:
+    image: tobaco_back:latest
+    container_name: tobaco_back
+    restart: unless-stopped
+    ports:
+      - 3200:8080
+
+networks:
+    default:
+      external: true
+      name: master-net
